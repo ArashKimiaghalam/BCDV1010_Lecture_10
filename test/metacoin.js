@@ -30,7 +30,7 @@ contract("MetaCoin", (accounts) => {
         );
     });
 
-    // #
+    // 3
     it("should send coin correctly", async () => {
         const metaCoinInstance = await MetaCoin.deployed();
 
