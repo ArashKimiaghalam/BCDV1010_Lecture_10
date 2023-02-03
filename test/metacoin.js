@@ -147,4 +147,13 @@ contract("MetaCoin", (accounts) => {
             "Balance changed unexpectedly"
         );
     });
+    
+    // 6 it is new test for sake of the test. Here we try to test the total supply that is availabe in the contract.
+    
+    it("should return the total supply of coins", async () => {
+        const metaCoinInstance = await MetaCoin.deployed();
+        const totalSupply = (await metaCoinInstance.totalSupply.call()).toNumber();
+
+        assert.equal(totalSupply, 100000, "Total supply is incorrect");
+    });
 });
